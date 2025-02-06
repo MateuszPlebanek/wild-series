@@ -35,9 +35,13 @@ function ProgramsPage() {
       <ul>
         {programs.map((program) => (
           <li key={program.id}>
-            <h2>{program.title} ({program.year})</h2>
+            <h2>
+              {program.title} ({program.year})
+            </h2>
             <img src={program.poster} alt={program.title} width="200px" />
-            <p><strong>Pays :</strong> {program.country}</p>
+            <p>
+              <strong>Pays :</strong> {program.country}
+            </p>
             <p>{program.synopsis}</p>
           </li>
         ))}

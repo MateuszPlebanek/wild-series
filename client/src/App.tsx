@@ -1,5 +1,5 @@
 import "./App.css";
-import { Outlet, Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -11,7 +11,8 @@ function App() {
       <nav className="navbar">
         <ul>
           <li>
-            <Link to="/programs">Séries</Link> {/* ✅ Garde uniquement le lien vers /programs */}
+            <Link to="/programs">Séries</Link>{" "}
+            {/* ✅ Garde uniquement le lien vers /programs */}
           </li>
           <li>
             <a
@@ -26,7 +27,8 @@ function App() {
       </nav>
 
       <main className="text-box">
-        <Outlet /> {/* 📌 Permet d'afficher les routes enfants définies dans `main.tsx` */}
+        <Outlet />{" "}
+        {/* 📌 Permet d'afficher les routes enfants définies dans `main.tsx` */}
       </main>
 
       <footer>
