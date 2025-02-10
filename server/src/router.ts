@@ -15,6 +15,9 @@ router.post("/api/items", itemActions.add);
 import programActions from "./modules/programs/programActions";
 router.get("/api/programs", programActions.browse);
 router.get("/api/programs/:id", programActions.read);
+router.post("/api/programs", programActions.add);
+router.put("/api/programs/:id", programActions.edit);
+router.delete("/api/programs/:id", programActions.destroy);
 
 import sayActions from "./modules/say/sayActions";
 router.get("/", sayActions.sayWelcome);
@@ -22,9 +25,11 @@ router.get("/", sayActions.sayWelcome);
 import categoryActions from "./modules/category/categoryActions";
 router.get("/api/categories", categoryActions.browse);
 router.get("/api/categories/:id", categoryActions.read);
+
 /* ************************************************************************* */
 // Declaration of a "Welcome" route
 
+import { r } from "@faker-js/faker/dist/airline-C5Qwd7_q";
 import type { RequestHandler } from "express";
 
 const sayWelcome: RequestHandler = (req, res) => {
